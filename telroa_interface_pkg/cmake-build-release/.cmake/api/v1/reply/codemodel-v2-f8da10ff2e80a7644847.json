@@ -1,0 +1,233 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-cd058cd809aaf39d8c2d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				},
+				{
+					"build" : "telroa_interface_pkg__py",
+					"jsonFile" : "directory-telroa_interface_pkg__py-Release-229b3ab24ac935fb1c84.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "cmake-build-release/telroa_interface_pkg__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "telroa_interface_pkg",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_telroa_interface_pkg_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_telroa_interface_pkg_egg-Release-83c384c8b4e27db573cb.json",
+					"name" : "ament_cmake_python_build_telroa_interface_pkg_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_telroa_interface_pkg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_telroa_interface_pkg-Release-eb395c00b2a0081eff76.json",
+					"name" : "ament_cmake_python_copy_telroa_interface_pkg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "telroa_interface_pkg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-telroa_interface_pkg-Release-59ddc275c55525a72d71.json",
+					"name" : "telroa_interface_pkg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "telroa_interface_pkg__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-telroa_interface_pkg__cpp-Release-1442ac131877aaec2fb1.json",
+					"name" : "telroa_interface_pkg__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "telroa_interface_pkg__py::@4820373b3d7b1b81342c",
+					"jsonFile" : "target-telroa_interface_pkg__py-Release-8625c095d581923ee0b8.json",
+					"name" : "telroa_interface_pkg__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "telroa_interface_pkg__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-telroa_interface_pkg__rosidl_generator_c-Release-55a1aa89ffeffb857711.json",
+					"name" : "telroa_interface_pkg__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "telroa_interface_pkg__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-telroa_interface_pkg__rosidl_generator_py-Release-727ae1edc6cc7e18b2fe.json",
+					"name" : "telroa_interface_pkg__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "telroa_interface_pkg__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-telroa_interface_pkg__rosidl_typesupport_c-Release-984ddffe9ec2fa4455b8.json",
+					"name" : "telroa_interface_pkg__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "telroa_interface_pkg__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-telroa_interface_pkg__rosidl_typesupport_c__pyext-Release-af52a39ebb4712ec59ae.json",
+					"name" : "telroa_interface_pkg__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "telroa_interface_pkg__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-telroa_interface_pkg__rosidl_typesupport_cpp-Release-7f910ea93424c81c51e6.json",
+					"name" : "telroa_interface_pkg__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "telroa_interface_pkg__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-telroa_interface_pkg__rosidl_typesupport_fastrtps_c-Release-a2bb37ee93c19ed62453.json",
+					"name" : "telroa_interface_pkg__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "telroa_interface_pkg__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-telroa_interface_pkg__rosidl_typesupport_fastrtps_c__pyext-Release-c7de289d2eb18bf50508.json",
+					"name" : "telroa_interface_pkg__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "telroa_interface_pkg__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-telroa_interface_pkg__rosidl_typesupport_fastrtps_cpp-Release-2d1c0d6d04dc7c2eeed4.json",
+					"name" : "telroa_interface_pkg__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "telroa_interface_pkg__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-telroa_interface_pkg__rosidl_typesupport_introspection_c-Release-034085a15aa6be7fc7fb.json",
+					"name" : "telroa_interface_pkg__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "telroa_interface_pkg__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-telroa_interface_pkg__rosidl_typesupport_introspection_c__pyext-Release-84810237703ab545c352.json",
+					"name" : "telroa_interface_pkg__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "telroa_interface_pkg__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-telroa_interface_pkg__rosidl_typesupport_introspection_cpp-Release-9f44c30f62b1314898a1.json",
+					"name" : "telroa_interface_pkg__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "telroa_interface_pkg_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-telroa_interface_pkg_uninstall-Release-7fb2a21e2158274f4c2f.json",
+					"name" : "telroa_interface_pkg_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Release-f4234e5f81d563ba19a6.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/starlight/Github/Telroa_ws_gazebo/src/telroa_interface_pkg/cmake-build-release",
+		"source" : "/home/starlight/Github/Telroa_ws_gazebo/src/telroa_interface_pkg"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

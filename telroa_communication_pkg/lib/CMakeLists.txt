@@ -1,0 +1,5 @@
+add_subdirectory(SpaceMouse)
+add_subdirectory(TelCon)
+add_subdirectory(XBox)
+add_subdirectory(ThreadGenerator)
+add_subdirectory(GUI)

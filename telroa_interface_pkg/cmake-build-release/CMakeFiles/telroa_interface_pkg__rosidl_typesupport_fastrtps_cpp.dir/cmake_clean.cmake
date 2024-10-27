@@ -1,0 +1,33 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/telroa_interface_pkg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/telroa_interface_pkg/action/detail/dds_fastrtps/example__type_support.cpp.o"
+  "CMakeFiles/telroa_interface_pkg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/telroa_interface_pkg/action/detail/dds_fastrtps/example__type_support.cpp.o.d"
+  "CMakeFiles/telroa_interface_pkg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/telroa_interface_pkg/msg/detail/dds_fastrtps/space_mouse__type_support.cpp.o"
+  "CMakeFiles/telroa_interface_pkg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/telroa_interface_pkg/msg/detail/dds_fastrtps/space_mouse__type_support.cpp.o.d"
+  "CMakeFiles/telroa_interface_pkg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/telroa_interface_pkg/msg/detail/dds_fastrtps/tel_con__type_support.cpp.o"
+  "CMakeFiles/telroa_interface_pkg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/telroa_interface_pkg/msg/detail/dds_fastrtps/tel_con__type_support.cpp.o.d"
+  "CMakeFiles/telroa_interface_pkg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/telroa_interface_pkg/msg/detail/dds_fastrtps/two_six_theta__type_support.cpp.o"
+  "CMakeFiles/telroa_interface_pkg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/telroa_interface_pkg/msg/detail/dds_fastrtps/two_six_theta__type_support.cpp.o.d"
+  "CMakeFiles/telroa_interface_pkg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/telroa_interface_pkg/msg/detail/dds_fastrtps/x_box__type_support.cpp.o"
+  "CMakeFiles/telroa_interface_pkg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/telroa_interface_pkg/msg/detail/dds_fastrtps/x_box__type_support.cpp.o.d"
+  "CMakeFiles/telroa_interface_pkg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/telroa_interface_pkg/srv/detail/dds_fastrtps/example__type_support.cpp.o"
+  "CMakeFiles/telroa_interface_pkg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/telroa_interface_pkg/srv/detail/dds_fastrtps/example__type_support.cpp.o.d"
+  "libtelroa_interface_pkg__rosidl_typesupport_fastrtps_cpp.pdb"
+  "libtelroa_interface_pkg__rosidl_typesupport_fastrtps_cpp.so"
+  "rosidl_typesupport_fastrtps_cpp/telroa_interface_pkg/action/detail/dds_fastrtps/example__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/telroa_interface_pkg/action/detail/example__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/telroa_interface_pkg/msg/detail/dds_fastrtps/space_mouse__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/telroa_interface_pkg/msg/detail/dds_fastrtps/tel_con__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/telroa_interface_pkg/msg/detail/dds_fastrtps/two_six_theta__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/telroa_interface_pkg/msg/detail/dds_fastrtps/x_box__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/telroa_interface_pkg/msg/detail/space_mouse__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/telroa_interface_pkg/msg/detail/tel_con__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/telroa_interface_pkg/msg/detail/two_six_theta__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/telroa_interface_pkg/msg/detail/x_box__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/telroa_interface_pkg/srv/detail/dds_fastrtps/example__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/telroa_interface_pkg/srv/detail/example__rosidl_typesupport_fastrtps_cpp.hpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/telroa_interface_pkg__rosidl_typesupport_fastrtps_cpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

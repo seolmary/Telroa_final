@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmotorcontrol.a CMakeFiles/motorcontrol.dir/src/MotorControl.cpp.o
+/usr/bin/ranlib libmotorcontrol.a

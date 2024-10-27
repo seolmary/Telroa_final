@@ -1,0 +1,34 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from telroa_interface_pkg/msg/TwoSixTheta.msg
+// generated code does not contain a copyright notice
+
+
+module telroa_interface_pkg {
+  module msg {
+    struct TwoSixTheta {
+      float theta_l1;
+
+      float theta_l2;
+
+      float theta_l3;
+
+      float theta_l4;
+
+      float theta_l5;
+
+      float theta_l6;
+
+      float theta_r1;
+
+      float theta_r2;
+
+      float theta_r3;
+
+      float theta_r4;
+
+      float theta_r5;
+
+      float theta_r6;
+    };
+  };
+};

@@ -1,0 +1,6 @@
+/home/starlight/Github/Telroa_ws_gazebo/src/telroa_interface_pkg/cmake-build-release/rosidl_adapter/telroa_interface_pkg:msg/XBox.idl
+/home/starlight/Github/Telroa_ws_gazebo/src/telroa_interface_pkg/cmake-build-release/rosidl_adapter/telroa_interface_pkg:msg/SpaceMouse.idl
+/home/starlight/Github/Telroa_ws_gazebo/src/telroa_interface_pkg/cmake-build-release/rosidl_adapter/telroa_interface_pkg:msg/TelCon.idl
+/home/starlight/Github/Telroa_ws_gazebo/src/telroa_interface_pkg/cmake-build-release/rosidl_adapter/telroa_interface_pkg:msg/TwoSixTheta.idl
+/home/starlight/Github/Telroa_ws_gazebo/src/telroa_interface_pkg/cmake-build-release/rosidl_adapter/telroa_interface_pkg:srv/Example.idl
+/home/starlight/Github/Telroa_ws_gazebo/src/telroa_interface_pkg/cmake-build-release/rosidl_adapter/telroa_interface_pkg:action/Example.idl

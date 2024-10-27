@@ -1,0 +1,12 @@
+float32 theta_l1
+float32 theta_l2
+float32 theta_l3
+float32 theta_l4
+float32 theta_l5
+float32 theta_l6
+float32 theta_r1
+float32 theta_r2
+float32 theta_r3
+float32 theta_r4
+float32 theta_r5
+float32 theta_r6

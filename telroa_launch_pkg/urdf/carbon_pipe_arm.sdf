@@ -1,0 +1,522 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+    <world name="carbon_pipe">
+        <physics name="1ms" type="ignored">
+            <max_step_size>0.001</max_step_size>
+            <real_time_factor>1.0</real_time_factor>
+        </physics>
+        <plugin
+            filename="libignition-gazebo-physics-system.so"
+            name="ignition::gazebo::systems::Physics">
+        </plugin>
+        <plugin
+            filename="libignition-gazebo-user-commands-system.so"
+            name="ignition::gazebo::systems::UserCommands">
+        </plugin>
+        <plugin
+            filename="libignition-gazebo-scene-broadcaster-system.so"
+            name="ignition::gazebo::systems::SceneBroadcaster">
+        </plugin>
+
+         <gui fullscreen="0">
+
+        <!-- 3D scene -->
+        <plugin filename="GzScene3D" name="3D View">
+            <ignition-gui>
+            <title>3D View</title>
+            <property type="bool" key="showTitleBar">false</property>
+            <property type="string" key="state">docked</property>
+            </ignition-gui>
+
+            <engine>ogre2</engine>
+            <scene>scene</scene>
+            <ambient_light>0.4 0.4 0.4</ambient_light>
+            <background_color>0.8 0.8 0.8</background_color>
+            <camera_pose>2 2 2 0 0.5 -2.5</camera_pose>
+        </plugin>
+
+        <!-- World control -->
+        <plugin filename="WorldControl" name="World control">
+            <ignition-gui>
+            <title>World control</title>
+            <property type="bool" key="showTitleBar">false</property>
+            <property type="bool" key="resizable">false</property>
+            <property type="double" key="height">72</property>
+            <property type="double" key="width">121</property>
+            <property type="double" key="z">1</property>
+
+            <property type="string" key="state">floating</property>
+            <anchors target="3D View">
+                <line own="left" target="left"/>
+                <line own="bottom" target="bottom"/>
+            </anchors>
+            </ignition-gui>
+
+            <play_pause>true</play_pause>
+            <step>true</step>
+            <start_paused>true</start_paused>
+
+        </plugin>
+
+        <!-- World statistics -->
+        <plugin filename="WorldStats" name="World stats">
+            <ignition-gui>
+            <title>World stats</title>
+            <property type="bool" key="showTitleBar">false</property>
+            <property type="bool" key="resizable">false</property>
+            <property type="double" key="height">110</property>
+            <property type="double" key="width">290</property>
+            <property type="double" key="z">1</property>
+
+            <property type="string" key="state">floating</property>
+            <anchors target="3D View">
+                <line own="right" target="right"/>
+                <line own="bottom" target="bottom"/>
+            </anchors>
+            </ignition-gui>
+
+            <sim_time>true</sim_time>
+            <real_time>true</real_time>
+            <real_time_factor>true</real_time_factor>
+            <iterations>true</iterations>
+        </plugin>
+
+        <plugin filename="JointPositionController" name="JointPositionController">
+            <ignition-gui>
+            <property type="double" key="height">600</property>
+            <property type="double" key="width">400</property>
+
+            <property type="string" key="state">floating</property>
+            <anchors target="3D View">
+                <line own="right" target="right"/>
+                <line own="top" target="top"/>
+            </anchors>
+            </ignition-gui>
+            <model_name>assembly_urdf</model_name>
+        </plugin>
+        </gui> 
+
+        <light type="directional" name="sun">
+            <cast_shadows>true</cast_shadows>
+            <pose>0 0 10 0 0 0</pose>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+            <attenuation>
+                <range>1000</range>
+                <constant>0.9</constant>
+                <linear>0.01</linear>
+                <quadratic>0.001</quadratic>
+            </attenuation>
+            <direction>-0.5 0.1 -0.9</direction>
+        </light>
+
+        <model name="ground_plane">
+            <static>true</static>
+            <link name="link">
+                <collision name="collision">
+                <geometry>
+                    <plane>
+                    <normal>0 0 1</normal>
+                    </plane>
+                </geometry>
+                </collision>
+                <visual name="visual">
+                <geometry>
+                    <plane>
+                    <normal>0 0 1</normal>
+                    <size>1000 1000</size>
+                    </plane>
+                </geometry>
+                <material>
+                    <ambient>0.8 0.8 0.8 1</ambient>
+                    <diffuse>0.8 0.8 0.8 1</diffuse>
+                    <specular>0.8 0.8 0.8 1</specular>
+                </material>
+                </visual>
+            </link>
+        </model>
+        <model name='assembly_urdf'>
+            <joint name="weld" type="fixed">
+                <pose>0 0 0.0 0 0 0</pose>
+                <parent>world</parent>
+                <child>base_link</child>
+            </joint>
+            <link name='base_link'>
+                <pose>0 0 0.02 0 0 0</pose>
+              <inertial>
+                <pose>0.04799993216352116 -0.005129619158982985 -0.003911773006344198 0 0 0</pose>
+                <mass>0.000016065120204988459</mass>
+                <inertia>
+                  <ixx>0.0011720000000000001</ixx>
+                  <ixy>0</ixy>
+                  <ixz>0</ixz>
+                  <iyy>0.0030339999999999998</iyy>
+                  <iyz>2.3e-05</iyz>
+                  <izz>0.0037209999999999999</izz>
+                </inertia>
+              </inertial>
+              <collision name='base_link_collision'>
+                <pose>0 0 0.0 0 0 0</pose>
+                <geometry>
+                  <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>base_link.obj</uri>
+                  </mesh>
+                </geometry>
+              </collision>
+              <visual name='base_link_visual'>
+                <pose>0 0 0.0 0 0 0</pose>
+                <geometry>
+                  <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>base_link.stl</uri>
+                  </mesh>
+                </geometry>
+                    <material>
+                        <ambient>0.0 1 0.0 1</ambient>
+                        <diffuse>0.0 1 0.0 1</diffuse>
+                        <specular>0.0 1 0.0 1</specular>
+                    </material>
+              </visual>
+            </link>
+            <joint name='Revolute 1' type='revolute'>
+              <pose relative_to='base_link'>0.048 0 0.018 0 0 0</pose>
+              <parent>base_link</parent>
+              <child>1st_link_1_1</child>
+              <axis>
+                <xyz>0 0 1</xyz>
+                <limit>
+                  <lower>-3.14</lower>
+                  <upper>3.14</upper>
+                </limit>
+                <dynamics>
+                  <spring_reference>0</spring_reference>
+                  <spring_stiffness>0</spring_stiffness>
+                </dynamics>
+              </axis>
+            </joint>
+            <link name='1st_link_1_1'>
+              <pose relative_to='Revolute 1'>0 0 0 0 0 0</pose>
+              <inertial>
+                <pose>-0.0001616472558962426 0.001245184024056535 0.03492814681823998 0 0 0</pose>
+                <mass>0.00001730207207490065</mass>
+                <inertia>
+                  <ixx>0.001122</ixx>
+                  <ixy>0</ixy>
+                  <ixz>-9.9999999999999995e-07</ixz>
+                  <iyy>0.0019170000000000001</iyy>
+                  <iyz>-1.5999999999999999e-05</iyz>
+                  <izz>0.001281</izz>
+                </inertia>
+              </inertial>
+              <collision name='1st_link_1_1_collision'>
+                <pose>-0.048 0 -0.018 0 0 0</pose>
+                <geometry>
+                  <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>1st_link_1_1.obj</uri>
+                  </mesh>
+                </geometry>
+              </collision>
+              <visual name='1st_link_1_1_visual'>
+                <pose>-0.048 0 -0.018 0 0 0</pose>
+                <geometry>
+                  <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>1st_link_1_1.stl</uri>
+                  </mesh>
+                </geometry>
+                    <material>
+                        <ambient>1.0 0 0.0 1</ambient>
+                        <diffuse>1.0 0 0.0 1</diffuse>
+                        <specular>1.0 0 0.0 1</specular>
+                    </material>
+              </visual>
+            </link>
+            <joint name='Revolute 2' type='revolute'>
+              <pose relative_to='1st_link_1_1'>0.045648 0.001554 0.06320000000000001 0 0 0</pose>
+              <parent>1st_link_1_1</parent>
+              <child>2nd_link_1_1</child>
+              <axis>
+                <xyz>-1 0 0</xyz>
+                <limit>
+                  <lower>-3.14</lower>
+                  <upper>3.14</upper>
+                </limit>
+                <dynamics>
+                  <spring_reference>0</spring_reference>
+                  <spring_stiffness>0</spring_stiffness>
+                </dynamics>
+              </axis>
+            </joint>
+            <link name='2nd_link_1_1'>
+              <pose relative_to='Revolute 2'>0 0 0 0 0 0</pose>
+              <inertial>
+                <pose>-0.04568002698242451 0.01182964688310641 0.1397808496024999 0 0 0</pose>
+                <mass>0.000022634076873991789</mass>
+                <inertia>
+                  <ixx>0.016591000000000002</ixx>
+                  <ixy>-1.2999999999999999e-05</ixy>
+                  <ixz>3.4999999999999997e-05</ixz>
+                  <iyy>0.016326</iyy>
+                  <iyz>-0.0022309999999999999</iyz>
+                  <izz>0.00191</izz>
+                </inertia>
+              </inertial>
+              <collision name='2nd_link_1_1_collision'>
+                <pose>-0.093648 -0.001554 -0.08119999999999999 0 0 0</pose>
+                <geometry>
+                  <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>2nd_link_1_1.obj</uri>
+                  </mesh>
+                </geometry>
+              </collision>
+              <visual name='2nd_link_1_1_visual'>
+                <pose>-0.093648 -0.001554 -0.08119999999999999 0 0 0</pose>
+                <geometry>
+                  <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>2nd_link_1_1.stl</uri>
+                  </mesh>
+                </geometry>
+                    <material>
+                        <ambient>0.0 0 1.0 1</ambient>
+                        <diffuse>0.0 0 1.0 1</diffuse>
+                        <specular>0.0 0 1.0 1</specular>
+                    </material>
+              </visual>
+            </link>
+            <joint name='Revolute 3' type='revolute'>
+              <pose relative_to='2nd_link_1_1'>-0.022 0.0601 0.2229 0 0 0</pose>
+              <parent>2nd_link_1_1</parent>
+              <child>3rd_link_1_1</child>
+              <axis>
+                <xyz>-1 0 0</xyz>
+                <limit>
+                  <lower>-3.14</lower>
+                  <upper>3.14</upper>
+                </limit>
+                <dynamics>
+                  <spring_reference>0</spring_reference>
+                  <spring_stiffness>0</spring_stiffness>
+                </dynamics>
+              </axis>
+            </joint>
+            <link name='3rd_link_1_1'>
+              <pose relative_to='Revolute 3'>0 0 0 0 0 0</pose>
+              <inertial>
+                <pose>-0.02340335350464721 0.1224355831045718 -2.818962660522395e-07 0 0 0</pose>
+                <mass>0.00001402290032769806</mass>
+                <inertia>
+                  <ixx>0.007273</ixx>
+                  <ixy>-1.5999999999999999e-05</ixy>
+                  <ixz>0</ixz>
+                  <iyy>0.00031399999999999999</iyy>
+                  <iyz>0</iyz>
+                  <izz>0.0073980000000000001</izz>
+                </inertia>
+              </inertial>
+              <collision name='3rd_link_1_1_collision'>
+                <pose>-0.071648 -0.061654 -0.3041 0 0 0</pose>
+                <geometry>
+                  <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>3rd_link_1_1.obj</uri>
+                  </mesh>
+                </geometry>
+              </collision>
+              <visual name='3rd_link_1_1_visual'>
+                <pose>-0.071648 -0.061654 -0.3041 0 0 0</pose>
+                <geometry>
+                  <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>3rd_link_1_1.stl</uri>
+                  </mesh>
+                </geometry>
+                    <material>
+                        <ambient>0.0 1 0.0 1</ambient>
+                        <diffuse>0.0 1 0.0 1</diffuse>
+                        <specular>0.0 1 0.0 1</specular>
+                    </material>
+              </visual>
+            </link>
+            <joint name='Revolute 4' type='revolute'>
+              <pose relative_to='3rd_link_1_1'>-0.003 0.2236 0 0 0 0</pose>
+              <parent>3rd_link_1_1</parent>
+              <child>4th_link_1_1</child>
+              <axis>
+                <xyz>-1 0 0</xyz>
+                <limit>
+                  <lower>-3.14</lower>
+                  <upper>3.14</upper>
+                </limit>
+                <dynamics>
+                  <spring_reference>0</spring_reference>
+                  <spring_stiffness>0</spring_stiffness>
+                </dynamics>
+              </axis>
+            </joint>
+            <link name='4th_link_1_1'>
+              <pose relative_to='Revolute 4'>0 0 0 0 0 0</pose>
+              <inertial>
+                <pose>-0.02050009508173301 0.05674528690423336 -0.0008307043317481999 0 0 0</pose>
+                <mass>0.0000045912689139442109</mass>
+                <inertia>
+                  <ixx>0.00025700000000000001</ixx>
+                  <ixy>0</ixy>
+                  <ixz>0</ixz>
+                  <iyy>0.00014200000000000001</iyy>
+                  <iyz>-1.9999999999999999e-06</iyz>
+                  <izz>0.00025399999999999999</izz>
+                </inertia>
+              </inertial>
+              <collision name='4th_link_1_1_collision'>
+                <pose>-0.068648 -0.285254 -0.3041 0 0 0</pose>
+                <geometry>
+                  <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>4th_link_1_1.obj</uri>
+                  </mesh>
+                </geometry>
+              </collision>
+              <visual name='4th_link_1_1_visual'>
+                <pose>-0.068648 -0.285254 -0.3041 0 0 0</pose>
+                <geometry>
+                  <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>4th_link_1_1.stl</uri>
+                  </mesh>
+                </geometry>
+                    <material>
+                        <ambient>1.0 0 0.0 1</ambient>
+                        <diffuse>1.0 0 0.0 1</diffuse>
+                        <specular>1.0 0 0.0 1</specular>
+                    </material>
+              </visual>
+            </link>
+            <joint name='Revolute 5' type='revolute'>
+              <pose relative_to='4th_link_1_1'>-0.0205 0.08550000000000001 0.0105 0 0 0</pose>
+              <parent>4th_link_1_1</parent>
+              <child>5th_link_1_1</child>
+              <axis>
+                <xyz>0 -1 0</xyz>
+                <limit>
+                  <lower>-3.14</lower>
+                  <upper>3.14</upper>
+                </limit>
+                <dynamics>
+                  <spring_reference>0</spring_reference>
+                  <spring_stiffness>0</spring_stiffness>
+                </dynamics>
+              </axis>
+            </joint>
+            <link name='5th_link_1_1'>
+              <pose relative_to='Revolute 5'>0 0 0 0 0 0</pose>
+              <inertial>
+                <pose>0.001170272613197638 0.03862175618756147 -0.005537904034870422 0 0 0</pose>
+                <mass>0.0000082230868550588532</mass>
+                <inertia>
+                  <ixx>0.00076499999999999995</ixx>
+                  <ixy>-9.9999999999999995e-07</ixy>
+                  <ixz>3.0000000000000001e-06</ixz>
+                  <iyy>0.00036299999999999999</iyy>
+                  <iyz>0.00012899999999999999</iyz>
+                  <izz>0.00072099999999999996</izz>
+                </inertia>
+              </inertial>
+              <collision name='5th_link_1_1_collision'>
+                <pose>-0.048148 -0.370754 -0.3146 0 0 0</pose>
+                <geometry>
+                  <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>5th_link_1_1.obj</uri>
+                  </mesh>
+                </geometry>
+              </collision>
+              <visual name='5th_link_1_1_visual'>
+                <pose>-0.048148 -0.370754 -0.3146 0 0 0</pose>
+                <geometry>
+                  <mesh>
+                    <scale>0.001 0.001 0.001</scale>
+                    <uri>5th_link_1_1.stl</uri>
+                  </mesh>
+                </geometry>
+                    <material>
+                        <ambient>0.0 0 1.0 1</ambient>
+                        <diffuse>0.0 0 1.0 1</diffuse>
+                        <specular>0.0 0 1.0 1</specular>
+                    </material>
+              </visual>
+            </link>
+            <plugin
+                filename="ignition-gazebo-joint-position-controller-system"
+                name="gz::sim::systems::JointPositionController">
+                <joint_name>Revolute 1</joint_name>
+                <topic>rotor_cmd1</topic>
+                <p_gain>1</p_gain>
+                <i_gain>0.1</i_gain>
+                <d_gain>0.2</d_gain>
+                <i_max>1</i_max>
+                <i_min>-1</i_min>
+                <cmd_max>10</cmd_max>
+                <cmd_min>-10</cmd_min>
+            </plugin>    
+            <plugin
+                filename="ignition-gazebo-joint-position-controller-system"
+                name="gz::sim::systems::JointPositionController">
+                <joint_name>Revolute 2</joint_name>
+                <topic>rotor_cmd2</topic>
+                <p_gain>1</p_gain>
+                <i_gain>0.1</i_gain>
+                <d_gain>0.2</d_gain>
+                <i_max>1</i_max>
+                <i_min>-1</i_min>
+                <cmd_max>10</cmd_max>
+                <cmd_min>-10</cmd_min>
+            </plugin>
+            <plugin
+                filename="ignition-gazebo-joint-position-controller-system"
+                name="gz::sim::systems::JointPositionController">
+                <joint_name>Revolute 3</joint_name>
+                <topic>rotor_cmd3</topic>
+                <p_gain>1</p_gain>
+                <i_gain>0.1</i_gain>
+                <d_gain>0.2</d_gain>
+                <i_max>1</i_max>
+                <i_min>-1</i_min>
+                <cmd_max>10</cmd_max>
+                <cmd_min>-10</cmd_min>
+            </plugin>    
+            <plugin
+                filename="ignition-gazebo-joint-position-controller-system"
+                name="gz::sim::systems::JointPositionController">
+                <joint_name>Revolute 4</joint_name>
+                <topic>rotor_cmd4</topic>
+                <p_gain>1</p_gain>
+                <i_gain>0.1</i_gain>
+                <d_gain>0.2</d_gain>
+                <i_max>1</i_max>
+                <i_min>-1</i_min>
+                <cmd_max>10</cmd_max>
+                <cmd_min>-10</cmd_min>
+            </plugin> 
+            <plugin
+                filename="ignition-gazebo-joint-position-controller-system"
+                name="gz::sim::systems::JointPositionController">
+                <joint_name>Revolute 5</joint_name>
+                <topic>rotor_cmd5</topic>
+                <p_gain>1</p_gain>
+                <i_gain>0.1</i_gain>
+                <d_gain>0.1</d_gain>
+                <i_max>1</i_max>
+                <i_min>-1</i_min>
+                <cmd_max>10</cmd_max>
+                <cmd_min>-10</cmd_min>
+            </plugin>    
+          </model>
+     
+    </world>
+</sdf> 
+
+

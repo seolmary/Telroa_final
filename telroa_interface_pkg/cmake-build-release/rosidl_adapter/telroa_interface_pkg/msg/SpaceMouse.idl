@@ -1,0 +1,26 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from telroa_interface_pkg/msg/SpaceMouse.msg
+// generated code does not contain a copyright notice
+
+
+module telroa_interface_pkg {
+  module msg {
+    struct SpaceMouse {
+      int32 x;
+
+      int32 y;
+
+      int32 z;
+
+      int32 roll;
+
+      int32 pitch;
+
+      int32 yaw;
+
+      int32 left;
+
+      int32 right;
+    };
+  };
+};

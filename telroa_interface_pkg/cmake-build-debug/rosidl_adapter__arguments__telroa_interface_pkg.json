@@ -1,0 +1,11 @@
+{
+  "package_name": "telroa_interface_pkg",
+  "non_idl_tuples": [
+    "/home/starlight/Github/Telroa_ws_gazebo/src/telroa_interface_pkg:msg/XBox.msg",
+    "/home/starlight/Github/Telroa_ws_gazebo/src/telroa_interface_pkg:msg/SpaceMouse.msg",
+    "/home/starlight/Github/Telroa_ws_gazebo/src/telroa_interface_pkg:msg/TelCon.msg",
+    "/home/starlight/Github/Telroa_ws_gazebo/src/telroa_interface_pkg:msg/TwoSixTheta.msg",
+    "/home/starlight/Github/Telroa_ws_gazebo/src/telroa_interface_pkg:srv/Example.srv",
+    "/home/starlight/Github/Telroa_ws_gazebo/src/telroa_interface_pkg:action/Example.action"
+  ]
+}

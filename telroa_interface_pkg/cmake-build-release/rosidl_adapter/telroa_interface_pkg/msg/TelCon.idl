@@ -1,0 +1,30 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from telroa_interface_pkg/msg/TelCon.msg
+// generated code does not contain a copyright notice
+
+
+module telroa_interface_pkg {
+  module msg {
+    struct TelCon {
+      double roll;
+
+      double pitch;
+
+      double yaw;
+
+      double vx;
+
+      double vy;
+
+      double vz;
+
+      double px;
+
+      double py;
+
+      double pz;
+
+      int32 status;
+    };
+  };
+};

@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "telroa_interface_pkg__py",
+		"source" : "cmake-build-release/telroa_interface_pkg__py"
+	}
+}

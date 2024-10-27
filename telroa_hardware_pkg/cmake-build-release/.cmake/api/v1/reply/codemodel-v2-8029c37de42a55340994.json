@@ -1,0 +1,130 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-2a0421e96a206c1ec673.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						3,
+						4
+					]
+				},
+				{
+					"build" : "MotorControl",
+					"jsonFile" : "directory-MotorControl-Release-16088dca768d90a639de.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "MotorControl",
+					"targetIndexes" : 
+					[
+						2
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "telroa_hardware_pkg",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						3,
+						4
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "motorcontrol",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "hard_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hard_node-Release-8338b1549c1f1d263689.json",
+					"name" : "hard_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ik_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ik_node-Release-b6ce32cbc65f10d3c938.json",
+					"name" : "ik_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "motorcontrol::@187fe59bc0398c7627ba",
+					"jsonFile" : "target-motorcontrol-Release-1e238c78b97f66de8242.json",
+					"name" : "motorcontrol",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "telroa_hardware_pkg_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-telroa_hardware_pkg_uninstall-Release-646391dc179b87ccea6a.json",
+					"name" : "telroa_hardware_pkg_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Release-4bb5c8b3e066af94ab73.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/starlight/Github/Telroa_ws_gazebo/src/telroa_hardware_pkg/cmake-build-release",
+		"source" : "/home/starlight/Github/Telroa_ws_gazebo/src/telroa_hardware_pkg"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

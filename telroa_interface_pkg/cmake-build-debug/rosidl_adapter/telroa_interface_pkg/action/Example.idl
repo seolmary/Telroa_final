@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from telroa_interface_pkg/action/Example.action
+// generated code does not contain a copyright notice
+
+
+module telroa_interface_pkg {
+  module action {
+    struct Example_Goal {
+      int32 order;
+    };
+    struct Example_Result {
+      sequence<int32> sequence;
+    };
+    struct Example_Feedback {
+      sequence<int32> partial_sequence;
+    };
+  };
+};
